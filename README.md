@@ -48,3 +48,27 @@ MODEL is the name of the model such as AlexNet, ResNet etc. Check the full list 
 pretrained is the flag which specifies whether you want the model to be initialized with the pretrained weights of the model or not. If set to True, it will also download the weights file, when absent.
 
 ============================================================================================
+
+Utils
+It has 2 nice functions which come in handy while dealing with images and publishing findings of your work.
+
+1.Make grid of images for display
+
+torchvision.utils.make_grid(tensor, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0)
+
+
+* tensor – 4D mini-batch Tensor of shape (B x C x H x W) or a list of images all of the same size.
+* nrow – Number of images displayed in each row of the grid. The final grid size is (B / nrow, nrow). Default: 8.
+* padding – amount of padding. Default: 2.
+* normalize – If True, shift the image to the range (0, 1), by the min and max values specified by range. Default: False.
+* range – tuple (min, max) where min and max are numbers, then these numbers are used to normalize the image. By default, min and max are computed from the tensor.
+* scale_each – If True, scale each image in the batch of images separately rather than the (min, max) over all images. Default: False.
+* pad_value – Value for the padded pixels. Default: 0.
+
+2.Save Image
+
+torchvision.utils.save_image(tensor, fp, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0, format=None)
+
+If you provide a mini-batch to the above function, it saves them as a grid of images. The other arguments are similar to make_grid
+
+============================================================================================
