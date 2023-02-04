@@ -26,7 +26,7 @@ _
 
 ============================================================================================
 
-_**torchvision.transforms.ToTensor **_- It takes in a PIL image of dimension [H X W X C] in the range [0,255] and converts it to a float Tensor of dimension [C X H X W] in the range [0,1].
+_**torchvision.transforms.ToTensor **_ - It takes in a PIL image of dimension [H X W X C] in the range [0,255] and converts it to a float Tensor of dimension [C X H X W] in the range [0,1].
 
 _**torchvision.transforms.Compose** _- It chains many transforms together so that you can apply then all in one go.
 
@@ -90,4 +90,12 @@ It writes the 4-D tensor video_array in video format specified by th filename.
 
 ============================================================================================
 
+Ops
+The ops module implements some functions used for specific computer vision tasks. Some of them are:
 
+Non Maximum suppression - Used in Object detection pipelines
+Region of Interest Pooling - Used in Fast RCNN paper
+Region of Interest Alignment - Used in Mask RCNN paper
+These are just mentioned for the sake if completeness and are rarely used.
+
+============================================================================================
