@@ -47,4 +47,4 @@ MODEL is the name of the model such as AlexNet, ResNet etc. Check the full list 
 
 pretrained is the flag which specifies whether you want the model to be initialized with the pretrained weights of the model or not. If set to True, it will also download the weights file, when absent.
 
-=======================================================================================================================================================================
+============================================================================================
