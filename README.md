@@ -21,3 +21,8 @@ torchvision.datasets.DATASET(root, train=True, transform=None, target_transform=
 * download is a flag which is turned on when you want to download the data. Note that the data is not downloaded if it is already present in the root folder mentioned above.
 * transform applies a series of image transforms on the input images. For example, cropping, resizing, etc.
 * target_transform takes the target or labels and transforms it as required.
+
+
+torchvision.transforms.ToTensor - It takes in a PIL image of dimension [H X W X C] in the range [0,255] and converts it to a float Tensor of dimension [C X H X W] in the range [0,1].
+
+torchvision.transforms.Compose - It chains many transforms together so that you can apply then all in one go.
