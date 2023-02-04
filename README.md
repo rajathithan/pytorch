@@ -26,3 +26,17 @@ torchvision.datasets.DATASET(root, train=True, transform=None, target_transform=
 torchvision.transforms.ToTensor - It takes in a PIL image of dimension [H X W X C] in the range [0,255] and converts it to a float Tensor of dimension [C X H X W] in the range [0,1].
 
 torchvision.transforms.Compose - It chains many transforms together so that you can apply then all in one go.
+
+torchvision.models has many well-known models for computer vision tasks
+
+eg:
+Classification
+Detection
+Segmentation
+Video Classification
+
+model = torchvision.models.MODEL(pretrained=True)
+Where,
+
+MODEL is the name of the model such as AlexNet, ResNet etc. Check the full list of available models here [1]:https://pytorch.org/vision/stable/models.html.
+pretrained is the flag which specifies whether you want the model to be initialized with the pretrained weights of the model or not. If set to True, it will also download the weights file, when absent.
