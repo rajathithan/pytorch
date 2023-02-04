@@ -13,9 +13,9 @@ Torchvision consists of the following classes
 * Ops
 
 ============================================================================================
-
-torchvision.datasets.DATASET(root, train=True, transform=None, target_transform=None, download=False)
-
+_
+**torchvision.datasets.DATASET(root, train=True, transform=None, target_transform=None, download=False)**
+_
 
 * DATASET is the name of the dataset, which can be MNIST, FashionMNIST, COCO etc. Get the full list here
 * root is the folder that stores the dataset. Use this if you opt to download.
@@ -26,9 +26,9 @@ torchvision.datasets.DATASET(root, train=True, transform=None, target_transform=
 
 ============================================================================================
 
-torchvision.transforms.ToTensor - It takes in a PIL image of dimension [H X W X C] in the range [0,255] and converts it to a float Tensor of dimension [C X H X W] in the range [0,1].
+_**torchvision.transforms.ToTensor **_- It takes in a PIL image of dimension [H X W X C] in the range [0,255] and converts it to a float Tensor of dimension [C X H X W] in the range [0,1].
 
-torchvision.transforms.Compose - It chains many transforms together so that you can apply then all in one go.
+_**torchvision.transforms.Compose** _- It chains many transforms together so that you can apply then all in one go.
 
 ============================================================================================
 
@@ -40,7 +40,7 @@ Detection
 Segmentation
 Video Classification
 
-model = torchvision.models.MODEL(pretrained=True)
+_**model = torchvision.models.MODEL(pretrained=True)**_
 Where,
 
 MODEL is the name of the model such as AlexNet, ResNet etc. Check the full list of available models here [https://pytorch.org/vision/stable/models.html].
@@ -54,7 +54,7 @@ It has 2 nice functions which come in handy while dealing with images and publis
 
 1.Make grid of images for display
 
-torchvision.utils.make_grid(tensor, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0)
+_**torchvision.utils.make_grid(tensor, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0)**_
 
 
 * tensor – 4D mini-batch Tensor of shape (B x C x H x W) or a list of images all of the same size.
@@ -67,8 +67,27 @@ torchvision.utils.make_grid(tensor, nrow=8, padding=2, normalize=False, range=No
 
 2.Save Image
 
-torchvision.utils.save_image(tensor, fp, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0, format=None)
+_**torchvision.utils.save_image(tensor, fp, nrow=8, padding=2, normalize=False, range=None, scale_each=False, pad_value=0, format=None)**_
 
 If you provide a mini-batch to the above function, it saves them as a grid of images. The other arguments are similar to make_grid
 
 ============================================================================================
+
+IO
+As the name suggests, it is designed to perform IO operations such as readin/writing media files. Currently it only supports video reading and writing.
+
+1.Read Video
+
+_**torchvision.io.read_video(filename, start_pts=0, end_pts=None, pts_unit='pts')**_
+
+It reads a video from filename and returns the video as well as audio frames. You can also specify the time stamp from/to where you want to read the video.
+
+2.Write Video 
+
+_**torchvision.io.write_video(filename, video_array, fps, video_codec='libx264', options=None)**_
+
+It writes the 4-D tensor video_array in video format specified by th filename.
+
+============================================================================================
+
+
